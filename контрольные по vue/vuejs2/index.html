@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div class="container">
+          <h1 class="title is-2">Список задач</h1>
+            <div class="box">
+              <h2 class="subtitle is-4">Добавить задачу</h2>
+              <div class="field">
+                  <label class="label">Задача</label>
+                  <div class="control">
+                      <input class="input" type="text" v-model="newTaskText" placeholder="Текст задачи">
+                  </div>
+              </div>
+              <div class="field">
+                <label class="label">Категория</label>
+                <div class="control">
+                    <div class="select">
+                      <select v-model="newTaskCategory">
+                        <option disabled value="">Выберите категорию</option>
+                        <option v-for="category in categories" :value="category">{{category}}</option>
+                      </select>
+                    </div>
+                </div>
+              </div>
+                <button class="button is-primary" @click="addTask">Добавить</button>
+            </div>
+
+            <!-- Отображение задач -->
+            <div v-for="(tasks, category) in groupedTasks" :key="category">
+              <h2 class="title is-4">{{ category }}</h2>
+              <div v-for="(task, index) in tasks" :key="index" class="box">
+                <p class="is-flex is-justify-content-space-between">
+                    <span>{{ task.text }}</span>
+                    <button class="button is-small is-danger" @click="removeTask(category, index)">Удалить</button>
+                </p>
+              </div>
+            </div>
+
+            <!-- Количество задач в каждой категории -->
+            <h2 class="subtitle is-4">Количество задач по категориям:</h2>
+            <ul class="is-size-5">
+              <li v-for="(count, category) in taskCounts" :key="category">
+                  <strong>{{ category }}:</strong> {{ count }}
+              </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

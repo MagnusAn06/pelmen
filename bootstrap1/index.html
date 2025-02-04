@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Перец</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body {
+            background-color: #111;
+            color: white;
+        }
+
+        .hero {
+            padding: 50px 20px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            -webkit-text-stroke: 1px white;
+            color: transparent;
+            text-align: center;
+
+        }
+
+
+        .circle {
+            background: #ccc;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: black;
+            margin: 20px auto;
+             width: 320px;
+            height: 320px;
+        }
+
+
+
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+
+          /* styles for md and xl */
+        @media (min-width: 768px) {
+            .hero {
+              text-align: start;
+             }
+              .hero h1 {
+                text-align: start;
+             }
+
+
+            .circle {
+              margin-left: 0;
+              margin-right: 0;
+
+            }
+        }
+
+        /* styles for sm */
+        @media (max-width: 767.98px) {
+           .hero h1 {
+                font-size: 3rem;
+
+            }
+
+            .circle {
+                 width: 240px;
+                  height: 240px;
+                  font-size: 1.2rem;
+             }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-dark bg-black px-3">
+    <a class="navbar-brand" href="#">Логотип</a>
+    <div>
+        <button class="btn btn-dark">ТЕКСТ</button>
+        <button class="btn btn-light">МЕНЮ</button>
+    </div>
+</nav>
+
+<section class="hero container">
+    <h1 class="mb-4">Крутой Перец</h1>
+
+    <div class="row align-items-center text-center text-md-start">
+        <div class="col-md-4 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Биография</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+
+            <h5 class="text-uppercase mt-4">Skills</h5>
+            <p>Веб-разработчик • UI/UX Дизайнер <br> Маркетолог • SEO оптимизатор <br> Руководитель</p>
+
+            <h5 class="text-uppercase mt-4">Контакты</h5>
+            <div class="social-icons">
+                 <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                 <a href="#"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-center text-md-center">
+             <div class="circle">320 × 320</div>
+        </div>
+
+
+        <div class="col-md-4 text-center text-md-end">
+            <h5 class="text-uppercase">Проекты</h5>
+            <h2>432</h2>
+
+            <h5 class="text-uppercase mt-4">Общий стаж</h5>
+            <h2>13+</h2>
+
+            <h5 class="text-uppercase mt-4">Количество клиентов</h5>
+            <h2>900</h2>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
